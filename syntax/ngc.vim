@@ -11,13 +11,13 @@ endif
 syn case ignore
 
 syntax match ngcConstant /\(\-\=[.0-9]*\)/
-syntax keyword ngcConditional if else endif
+syntax keyword ngcConditional if then goto
 syntax keyword ngcRepeat do while endwhile break continue end goto
 syntax keyword ngcFunction sub endsub call return
 syntax keyword ngcOperator EQ NE GT GE LT LE ABS ACOS ASIN ATAN COS EXP FIX FUP LN ROUND SIN SQRT TAN MOD AND OR
 syntax match ngcOperatorPunc "[%\-+*/\[\]]"
 syntax match ngcFileBlock /^%$/
-syntax match ngcProgramID /\(O[0-9][0-9]*\|:[0-9][0-9]*\)/
+syntax match ngcProgramID /^\(O[0-9][0-9]*\|:[0-9][0-9]*\)/
 syntax match ngcIdentifier /#<*[A-Z_0-9]*>*/
 syntax match ngcLineNumbers /\(n[0-9][0-9]*\)/
 syntax keyword ngcTodo TODO FIXME XXX contained
